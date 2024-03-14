@@ -1,113 +1,118 @@
 import Image from "next/image";
+import logo from "../app/assets/logo.svg";
+import media from "../app/assets/media.png";
+import progressSvg from "../app/assets/Progress.svg";
+import crossSvg from "../app/assets/cross.svg";
+import eyeOf from "../app/assets/eye-off.svg";
+import checkbox from "../app/assets/Checklist.svg";
+import devider from "../app/assets/Devider.svg";
+import google from "../app/assets/google.svg";
+import apple from "../app/assets/apple.svg";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex w-full bg-black text-white">
+      <div className="w-[50%]  flex flex-col bg-slate-900">
+        <nav className="w-full h-13 justify-start">
+        <Image className="relative top-0 left-20" src={logo} alt="logo" width={47} height={66} />
+        </nav>
+        <div className="my-20 w-[100%] flex justify-center"> 
+        <Image className="" src={media} alt="logo" width={350} height={350} />
+        </div>
+        <h1 className="text-center text-4xl font-bold">Watch Premium Content</h1>
+        <div className="flex flex-col justify-center items-center text-center w-full text-sm my-5">
+    <span>Bgtv is one of a local svod Product from Malaysia Subscription </span>
+    <span>video on demand. So we having our in-house video production.</span>
+</div>
+        <div className="flex flex-col justify-center items-center text-center w-full text-sm my-5">
+        <Image className="" src={progressSvg} alt="logo" width={350} height={350} />
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* RIGHTSIDE */}
+      
+      <div className="w-[50%] flex bg-black text-white overflow-y-auto">
+      <nav className="my-3">
+        <Image className="relative top-0 left-[550px]" src={crossSvg} alt="logo" width={30} height={36}></Image>
+        </nav>
+        <div className="leading-[1.5] flex flex-col my-16 w-full">
+       <div className="flex flex-col">
+       <p className="mx-20 font-semibold text-gray-600">S I G N &nbsp;&nbsp;&nbsp;    U P</p>
+        <h1 className="text-center font-bold  text-4xl flex my-4 mx-20">
+          Create your account
+          </h1>
+        <p className="text-center mr-10 font-extralight ">Register your account to enjoy premium content from BGTV</p>
+       </div>
+
+
+       <div className="container mx-auto p-8 rounded shadow-md">
+        <div className="flex space-x-5 ml-14">
+          <div className="mb-4">
+            <label htmlFor="firstName" className="block font-bold mb-2">First Name<span className="text-red-800">*</span></label>
+            <input type="text" id="firstName" placeholder="First name" className="w-52 px-4 py-2 mb-2 rounded-lg bg-gray-800" />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="lastName" className="block font-bold mb-2">Last Name<span className="text-red-800">*</span></label>
+            <input type="text" id="lastName" placeholder="Last name" className="w-52 px-4 py-2 mb-2 rounded-lg bg-gray-800" />
+          </div>
+        </div>
+        <div className="mb-4 ml-14">
+            <label htmlFor="emailaddress" className="block font-bold mb-2">Email Address<span className="text-red-800">*</span></label>
+            <input type="email" id="emailaddress" placeholder="Email Address" className="w-[435px] px-4 py-2 mb-2 rounded-lg bg-gray-800" />
+          </div>
+        <div className="mb-4 ml-14">
+            <label htmlFor="username" className="block font-bold mb-2">Username<span className="text-red-800">*</span></label>
+            <input type="text" id="username" placeholder="username" className="w-[435px] px-4 py-2 mb-2 rounded-lg bg-gray-800" />
+          </div>
+        <div className="mb-4 ml-14">
+            <label htmlFor="phoneno" className="block font-bold mb-2">Phone No<span className="text-red-800">*</span></label>
+            <input type="number" id="phoneno" placeholder="Phone" className="w-[435px] px-4 py-2 mb-2 rounded-lg bg-gray-800" />
+          </div>
+          <div className="mb-4 ml-14 relative">
+    <label htmlFor="password" className="block font-bold mb-2">Password<span className="text-red-800">*</span></label>
+    <input type="password" id="password" placeholder="Password" className="w-[435px] px-4 py-2 mb-2 rounded-lg bg-gray-800" />
+    <div className="absolute -top-2 right-24 bottom-56 flex">
+        <Image src={eyeOf} alt="Eye Icon" width={25} height={25} />
+    </div>
+    <div className="flex space-x-2 items-center mt-2">
+    <Image src={checkbox} alt="Eye Icon" width={25} height={25} />
+    <span className="text-gray-600">I agree to</span>
+    <span><a className="underline text-white" href="#">Terms and conditions</a></span>
+    <span className="text-gray-600">and</span>
+    <span><a className="underline text-white" href="#">Privacy policy</a></span>
+</div>
+    <button className="w-[435px] px-4 py-2 mb-2 rounded-lg bg-blue-800 mt-7">Register</button>
+    <div className="flex items-center gap-3 ml-3">
+    <Image src={devider} className="text-white w-[150px]" alt="Eye Icon" width={25} height={25} />
+    <a className=" text-gray-600" href="#">or sign up with</a>
+    <Image src={devider} className="text-white w-[130px]" alt="Eye Icon" width={25} height={25} />
+    </div>
+
+    <div className="flex space-x-5 mt-5">
+    <div className="mb-4">
+        <button className="w-52 px-4 py-3 mb-2 rounded-lg bg-transparent border flex items-center justify-center">
+            <Image src={google} className="mr-2" alt="Google Icon" width={25} height={25} />
+            <span className="text-white">Google</span>
+        </button>
+    </div>
+    <div className="mb-4">
+        <button className="w-52 px-4 py-3 mb-2 rounded-lg bg-transparent border flex items-center justify-center">
+            <Image src={apple} className="mr-2" alt="Apple Icon" width={25} height={25} />
+            <span className="text-white">Apple</span>
+        </button>
+    </div>
+</div>
+<div className="flex space-x-2 items-center justify-center mt-2">
+    <span className="text-gray-600">Already have an account?</span>
+    <span><a className=" text-blue-700" href="#">Sign In.</a></span>
+</div>
+
+
+</div>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        </div>
       </div>
     </main>
   );
-}
+  }
+
